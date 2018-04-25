@@ -1,4 +1,8 @@
 function double(num) {
+  if(isNaN(num))
+  {
+    throw new Error('input need to be number');
+  }
   return num * 2;
 }
 
@@ -14,5 +18,13 @@ describe('double', () => {
 describe('not to be', () => {
   it('5*2 = 52', () => {
     expect(double(5)).not.toBe(52);
+  });
+});
+
+describe('kanepikala', () => {
+  it('double "kala" on is not a number', () => {
+    expect(() => {
+      double('kala');
+    }).toThrow();
   });
 });
