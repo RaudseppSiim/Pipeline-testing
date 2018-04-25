@@ -27,10 +27,10 @@ before_script:
 
 script:
   - npm run build
-  - docker build -t eritikass/ci-test .
+  - docker build -t RaudseppSiim/Pipeline-testing .
 
 after_script:
   - docker ps
-  - docker run -d --name ci-test -p "8081:80" eritikass/ci-test
+  - docker run -d --name Pipeline-testing -p "8081:80" RaudseppSiim/Pipeline-testing
   - docker ps
   - curl "http://localhost:8081/index.html"
