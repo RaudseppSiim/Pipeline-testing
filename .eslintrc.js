@@ -47,12 +47,15 @@ module.exports = {
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
 	'linebreak-style': 0,
-	
+
 	'import/extensions': 0,
 	'import/no-unresolved': 0,
 	'import/no-extraneous-dependencies': 0,
 	'import/no-named-as-default-member': 0,
 	'import/no-named-as-default': 0,
-	'import/no-duplicates': 0,
+    'import/no-duplicates': 0,
+
+    // allow console, we can remove it with uglify when needed
+    'no-console': 0,
   }
 }

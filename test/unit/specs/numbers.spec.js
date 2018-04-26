@@ -1,6 +1,5 @@
 function double(num) {
-  if(isNaN(num))
-  {
+  if (isNaN(num)) {
     throw new Error('input need to be number');
   }
   return num * 2;
